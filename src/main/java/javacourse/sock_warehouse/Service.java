@@ -121,7 +121,7 @@ public class Service {
             log.info("getSocksCount: found " + count + " socks with cotton % > " + cottonPart);
             return ResponseEntity.ok(String.valueOf(count));
         } else if (operation.equals("lessThan")) {
-            int count = 0;
+            long count = 0;
             for (Socks s : storedSocksList) {
                 if (s.getCotton() < cottonPart)
                     count += s.getQuantity();
